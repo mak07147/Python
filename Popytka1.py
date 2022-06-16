@@ -23,32 +23,47 @@
 #     finished_sandwiches.append(sandwich)
 # print(finished_sandwiches)
 # print("Sorry, we haven't pastrami anymore")
-######################################################
-def tower_builder(n_floors):
-    n = n_floors
+###############################################################
+# def tower_builder(n_floors):
+#     n = n_floors
+#
+#     if n == 1:
+#         list = ['*']
+#         for i in range(1, n, 2):
+#             a = i * '*'
+#             list.append(a.center(n))
+#     elif n == 2:
+#         list = []
+#         for i in range(n - 1, 2 * n, 2):
+#             a = i * '*'
+#             list.append(a.center(2 * n - 1))
+#     elif n > 2 or n % 2 != 0:
+#         list = []
+#         for i in range(1, 2 * n, 2):
+#             a = i * '*'
+#             list.append(a.center(2 * n - 1))
+#     elif n > 2 or n % 2 == 0:
+#         list = []
+#         for i in range(1, 2 * n, 2):
+#             a = i * '*'
+#             list.append(a.center(2 * n - 1))
+#     return list
+# print(tower_builder(3))
+##################################################################################
+# Крутое решение к задаче выше
+# def tower_builder(n):
+#     return [("*" * (i*2-1)).center(n*2-1) for i in range(1, n+1)]
+# print(tower_builder(5))
+#######################################################################################
 
-    if n == 1:
-        list = ['*']
-        for i in range(1, n, 2):
-            a = i * '*'
-            list.append(a.center(n))
-    elif n == 2:
-        list = []
-        for i in range(n - 1, 2 * n, 2):
-            a = i * '*'
-            list.append(a.center(2 * n - 1))
-    elif n > 2 or n % 2 != 0:
-        list = []
-        for i in range(1, 2 * n, 2):
-            a = i * '*'
-            list.append(a.center(2 * n - 1))
-    elif n > 2 or n % 2 == 0:
-        list = []
-        for i in range(1, 2 * n, 2):
-            a = i * '*'
-            list.append(a.center(2 * n - 1))
-    return list
-print(tower_builder(3))
+
+
+
+
+
+
+
+
 
 
 
