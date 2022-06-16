@@ -1,47 +1,54 @@
-# Вам предстоит написать программу, которая шифрует сообщения по следующему алгоритму:
-# она берёт текст и переставляет в нём каждые два подряд идущих символа.
+# ###################Task 14/06/2022########################
+# def high_and_low(numbers):
+#     list_of_numbers = numbers.split()
+#     checked_numbers = []
+#     while list_of_numbers:
+#         current_number = list_of_numbers.pop()
+#         checked_numbers.append(int(current_number))
+#     return str(max(checked_numbers)) + ' ' + str(min(checked_numbers))
+# print(high_and_low('1 9 3 4 -5'))
+####################################################################
+# def high_and_low(numbers):
+#     numbers = [int(x) for x in numbers.split(" ")]
+#     return str(max(numbers)) + " " + str(min(numbers))
+# print(high_and_low('1 9 3 4 -5'))
+###################################################################################################################
 
-# Если количество символов нечётное, то последний символ остаётся на своём месте:
+# sandwich_orders = ['safish', 'sameat', 'pastrami', 'sacheese', 'satomato', 'pastrami', 'saremba', 'pastrami']
+# finished_sandwiches = []
+# while 'pastrami' in sandwich_orders:
+#     sandwich_orders.remove('pastrami')
+#
+# for sandwich in sandwich_orders:
+#     finished_sandwiches.append(sandwich)
+# print(finished_sandwiches)
+# print("Sorry, we haven't pastrami anymore")
+######################################################
+def tower_builder(n_floors):
+    n = n_floors
 
-# encrypt("move") # 'omev'
-# encrypt("attack") # 'taatkc'
-# encrypt("go!") # 'og!'
-# Реализуйте функцию encrypt(), который принимает на вход исходное сообщение и возвращает зашифрованное.
-def encrypt(text):
-    i = 0
-    str = ''
-    if len(text) % 2 == 0:
-        while i < len(text):
-            if i == 0 or i % 2 == 0:
-                result1 = text[i + 1]
-                str = str + result1
-            elif i != 0 or i % 2 != 0:
-                result2 = text[i - 1]
-                str = str + result2
-            i = i + 1
-        return str + text[len(text) - 1]
-print(encrypt('attack')) #taatkc!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    if n == 1:
+        list = ['*']
+        for i in range(1, n, 2):
+            a = i * '*'
+            list.append(a.center(n))
+    elif n == 2:
+        list = []
+        for i in range(n - 1, 2 * n, 2):
+            a = i * '*'
+            list.append(a.center(2 * n - 1))
+    elif n > 2 or n % 2 != 0:
+        list = []
+        for i in range(1, 2 * n, 2):
+            a = i * '*'
+            list.append(a.center(2 * n - 1))
+    elif n > 2 or n % 2 == 0:
+        list = []
+        for i in range(1, 2 * n, 2):
+            a = i * '*'
+            list.append(a.center(2 * n - 1))
+    return list
+print(tower_builder(3))
 
 
 
