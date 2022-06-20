@@ -59,12 +59,31 @@
 
 # Теперь все задачи решаем в этом файле
 
+# def build_profile(first, last, **user_info):
+#     """Строит словарь с информацией о пользователе."""
+#     profile = {}
+#     profile['first_name'] = first
+#     profile['last_name'] = last
+#     for key, value in user_info.items():
+#         profile[key] = value
+#     return profile
+#
+# user_profile = build_profile('albert', 'einstein',
+#                              location='princeton',
+#                              field='physics')
+# print(user_profile)
+############################################################################
+# Думал на простым решением очень долго!!! Не забывать расписывать на листике математику с заменой переменных.
+# Очень хороший пример!!!
 
+# import random
+#
+# def choice_from_range(text, a, b):
+#     n = b + 1
+#     return random.choice(text[a:n])
+# print(choice_from_range('abcdef', 3, 5))
 
-
-
-
-
+########################################################################################
 
 
 
