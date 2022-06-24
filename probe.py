@@ -1,13 +1,9 @@
-from test import is_vowel
-
-
-def count_vowels(text):
-    result = 0
-    for char in text:
-        if is_vowel(char):
-            result = result + 1
-    return result
-
-
-
-print(count_vowels('Oneeeeea'))
+some_array = [11, 1, 2, 8, 3, 4, 5]
+odd_arr = sorted([i for i in some_array if i % 2 != 0])
+arrs_odd = odd_arr[::-1]
+final_arr = []
+for el in some_array:
+    if el % 2 != 0:
+        b = arrs_odd.pop()
+        final_arr.append(b)
+print(final_arr)
